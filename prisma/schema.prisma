@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id          String       @id @default(uuid())
+  name        String
+  username    String       @unique
+  email       String       @unique
+  phone       String       @unique
+  password    String
+  role        String       @default("USER")
+  status      String       @default("ACTIVE")
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  userProfile UserProfile?
+  foundedItem FoundItem[]
+  claim       Claim[]
+  lostItem    LostItem[]
+}
+
+model UserProfile {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  bio       String
+  image     String   @default("https://i.ibb.co.com/xXctT15/user.jpg")
+  age       Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User? @relation(fields: [userId], references: [id])
+}
+
+model Category {
+  id          String      @id @default(uuid())
+  name        String      @unique
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  foundedItem FoundItem[]
+  lostItem    LostItem[]
+}
+
+model FoundItem {
+  id          String   @id @default(uuid())
+  userId      String
+  categoryId  String
+  itemName    String
+  description String
+  location    String
+  pictures    String[]
+  foundDate   DateTime
+  isReturned  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user     User     @relation(fields: [userId], references: [id])
+  category Category @relation(fields: [categoryId], references: [id])
+  claim    Claim[]
+}
+
+model LostItem {
+  id          String   @id @default(uuid())
+  userId      String
+  categoryId  String
+  itemName    String
+  description String
+  location    String
+  lostDate    DateTime
+  pictures    String[]
+  isFound     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user     User     @relation(fields: [userId], references: [id])
+  category Category @relation(fields: [categoryId], references: [id])
+}
+
+model Claim {
+  id          String      @id @default(uuid())
+  userId      String
+  foundItemId String
+  response    String      @default("Waiting for response")
+  status      ClaimStatus @default(PENDING)
+  description String
+  pictures    String[]
+  driveUrl    String?
+  lostDate    DateTime
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  user      User      @relation(fields: [userId], references: [id])
+  foundItem FoundItem @relation(fields: [foundItemId], references: [id])
+}
+
+model NewsLetterEmails {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("news_letter_emails")
+}
+
+enum ClaimStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  BLOCKED
+}
