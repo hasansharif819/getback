@@ -1,7 +1,6 @@
 ## Instructions on how to run the server locally 📝
 
 - 1️⃣ Clone the repository to your machine if you have the access. Use this link to do it.
-  ↦ <https://github.com/gsjoy24/getback-server>
 - 2️⃣ Open the project in vs code and create a file named .env in the root of the folder.
 - 3️⃣ Add the code bellow in the .env file
 
