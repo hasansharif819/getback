@@ -45,7 +45,7 @@ Server is running on http://localhost: 3000
 client-git: <https://github.com/hasansharif819/getback-client>
 backend-git: <https://github.com/hasansharif819/getback>
 
-client-live: <http://getback.vercel.app/>
+client-live: <https://getback-lemon.vercel.app>
 backend-live: <https://getback-server.vercel.app>
 
 admin -
