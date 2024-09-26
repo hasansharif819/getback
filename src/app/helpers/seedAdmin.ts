@@ -6,10 +6,10 @@ import userRoles from '../utils/userRoles';
 
 const seedAdmin = async () => {
 	const adminData = {
-		name: 'Gour Saha Joy',
-		username: 'gourjoy',
+		name: 'Sharif Hasan',
+		username: 'sharifhasan',
 		email: config.adminEmail,
-		phone: '01700000000',
+		phone: '01568268795',
 		password: config.adminPass as string,
 		role: userRoles.ADMIN
 	};

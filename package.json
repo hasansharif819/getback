@@ -13,7 +13,7 @@
     "deploy": "vercel --prod",
     "postinstall": "prisma generate"
   },
-  "author": "Gour Saha Joy",
+  "author": "Sharif Hasan",
   "license": "ISC",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

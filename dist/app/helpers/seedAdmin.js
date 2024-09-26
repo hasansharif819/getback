@@ -18,17 +18,17 @@ const prisma_1 = __importDefault(require("../utils/prisma"));
 const userRoles_1 = __importDefault(require("../utils/userRoles"));
 const seedAdmin = () => __awaiter(void 0, void 0, void 0, function* () {
     const adminData = {
-        name: 'Gour Saha Joy',
-        username: 'gourjoy',
+        name: 'Sharif Hasan',
+        username: 'sharifhasan',
         email: config_1.default.adminEmail,
-        phone: '01700000000',
+        phone: '01568268795',
         password: config_1.default.adminPass,
         role: userRoles_1.default.ADMIN
     };
     const profileData = {
         image: 'https://i.ibb.co/4KDPMYq/user.jpg',
         bio: 'Software Engineer',
-        age: 23
+        age: 26
     };
     try {
         const findAdmin = yield prisma_1.default.user.findUnique({

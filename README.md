@@ -15,12 +15,12 @@ JWT_REFRESH_SECRET=afhukdayfuiyhvgdcfiasbfdusd
 JWT_REFRESH_EXPIRATION=15d
 PASS_SAIL=12
 
-APP_EMAIL=gour.joy24@gmail.com
-APP_PASSWORD=jhypfgmhyzwrlkid
+APP_EMAIL=hs.sharif819@gmail.com
+APP_PASSWORD=Sharif819
 
 # admin credential
-ADMIN_EMAIL=gour.joy24@gmail.com
-ADMIN_PASSWORD=SuperAdmin0
+ADMIN_EMAIL=hs.sharif819@gmail.com
+ADMIN_PASSWORD=SuperAdmin
 
 ```
 
@@ -43,16 +43,16 @@ Server is running on http://localhost: 3000
 
 #### This server is deployed on vercel
 
-client-git: <https://github.com/gsjoy24/getback-client>
-backend-git: <https://github.com/gsjoy24/getback-server>
+client-git: <https://github.com/hasansharif819/getback-client>
+backend-git: <https://github.com/hasansharif819/getback>
 
 client-live: <http://getback.vercel.app/>
-backend-live: <https://lost-and-found-server-joy.vercel.app/>
+backend-live: <https://getback-server.vercel.app>
 
 admin -
-email : <gour.joy24@gmail.com>
-password : SuperAdmin0
+email : <hs.sharif819@gmail.com>
+password : SuperAdmin
 
 user -
-email :gour@gmail.com
-password: password
+email :sharif@gmail.com
+password: 123456
