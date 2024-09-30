@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.get('/', (req: Request, res: Response) => {
 	res.send({
 		status: 'success',
-		message: 'server for lost and find is running!'
+		message: 'GetBack Server is Running!!!'
 	});
 });
 
