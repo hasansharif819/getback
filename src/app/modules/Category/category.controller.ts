@@ -29,7 +29,7 @@ const updateCategory = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Category updated successfully',
+		message: 'You have successfully updated Category',
 		data: category
 	});
 });
@@ -39,7 +39,7 @@ const deleteCategory = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.NO_CONTENT,
 		success: true,
-		message: 'Category deleted successfully'
+		message: 'Category is deleted successfully'
 	});
 });
 
