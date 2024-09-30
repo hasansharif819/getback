@@ -19,7 +19,7 @@ const getCategories = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Categories fetched successfully',
+		message: 'Categories are fetched successfully',
 		data: categories
 	});
 });
