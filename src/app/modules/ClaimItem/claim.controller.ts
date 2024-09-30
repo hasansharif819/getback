@@ -52,7 +52,7 @@ const getMyClaims = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Claims retrieved successfully',
+		message: 'My Claims are retrieved successfully',
 		meta,
 		data: claims
 	});
@@ -65,7 +65,7 @@ const updateClaim = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Claim data updated successfully',
+		message: 'You have successfully updated the claim data',
 		data: updatedClaim
 	});
 });
