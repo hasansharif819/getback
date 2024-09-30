@@ -23,7 +23,7 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Users retrieved successfully',
+		message: 'All users retrieved successfully',
 		meta,
 		data: users
 	});
@@ -34,7 +34,7 @@ const getUserProfile = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.CREATED,
 		success: true,
-		message: 'Profile retrieved successfully',
+		message: 'Your profile is retrieved successfully',
 		data: profile
 	});
 });
@@ -44,7 +44,7 @@ const updateUserProfile = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.CREATED,
 		success: true,
-		message: 'User profile updated successfully',
+		message: 'Your profile is updated successfully',
 		data: profile
 	});
 });
