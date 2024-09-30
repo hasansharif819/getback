@@ -26,7 +26,7 @@ const getClaims = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Claims retrieved successfully',
+		message: 'Claims are retrieved successfully',
 		meta,
 		data: claims
 	});
