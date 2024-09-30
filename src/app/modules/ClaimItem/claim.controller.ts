@@ -39,7 +39,7 @@ const getClaim = catchAsync(async (req: Request, res: Response) => {
 	sendResponse(res, {
 		statusCode: httpStatus.OK,
 		success: true,
-		message: 'Claim retrieved successfully',
+		message: 'Your Claim is retrieved successfully',
 		data: claim
 	});
 });
